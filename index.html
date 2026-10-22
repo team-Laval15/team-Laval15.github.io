@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elie Laval — Portfolio Data</title>
+  <meta name="description" content="Portfolio d'Elie Laval, étudiant en BUT Science des données à l'IUT d'Aurillac.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav">
+    <a href="#accueil" class="nav__logo">EL<span>.</span></a>
+    <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="nav__links">
+      <a href="#apropos">À propos</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projets">Projets</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#passions">Passions</a>
+      <a href="#contact" class="nav__cta">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== ACCUEIL ===== -->
+    <section id="accueil" class="hero">
+      <canvas id="stars" aria-hidden="true"></canvas>
+      <div class="hero__content container">
+        <p class="mono hero__kicker" id="hero-kicker"></p>
+        <h1 class="hero__title" id="hero-name"></h1>
+        <p class="hero__subtitle" id="hero-tagline"></p>
+        <div class="hero__actions">
+          <a href="#projets" class="btn btn--primary">Voir mes projets</a>
+          <a href="#" class="btn btn--ghost" id="hero-cv" target="_blank" rel="noopener">Télécharger mon CV</a>
+        </div>
+      </div>
+      <svg class="hero__mountains" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+        <path class="m-back" d="M0 220 L0 140 L120 90 L220 130 L340 60 L470 120 L560 80 L700 140 L820 70 L960 125 L1080 55 L1210 115 L1330 85 L1440 120 L1440 220 Z"/>
+        <path class="m-front" d="M0 220 L0 175 L160 130 L300 170 L420 125 L560 165 L690 115 L850 170 L990 135 L1130 172 L1270 128 L1440 160 L1440 220 Z"/>
+      </svg>
+    </section>
+
+    <!-- ===== À PROPOS ===== -->
+    <section id="apropos" class="section container">
+      <h2 class="section__title"><span class="mono">01.</span> À propos</h2>
+      <div class="about">
+        <div class="about__text" id="about-text"></div>
+        <ul class="about__facts" id="about-facts"></ul>
+      </div>
+    </section>
+
+    <!-- ===== COMPÉTENCES ===== -->
+    <section id="competences" class="section container">
+      <h2 class="section__title"><span class="mono">02.</span> Compétences</h2>
+      <div class="skills" id="skills"></div>
+    </section>
+
+    <!-- ===== PROJETS ===== -->
+    <section id="projets" class="section container">
+      <h2 class="section__title"><span class="mono">03.</span> Projets</h2>
+      <div class="filters" id="filters" role="tablist"></div>
+      <div class="projects" id="projects"></div>
+    </section>
+
+    <!-- ===== PARCOURS ===== -->
+    <section id="parcours" class="section container">
+      <h2 class="section__title"><span class="mono">04.</span> Parcours</h2>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <!-- ===== PASSIONS ===== -->
+    <section id="passions" class="section container">
+      <h2 class="section__title"><span class="mono">05.</span> En dehors du code</h2>
+      <div class="passions" id="passions-list"></div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section container contact">
+      <h2 class="section__title section__title--center"><span class="mono">06.</span> Contact</h2>
+      <p class="contact__text" id="contact-text"></p>
+      <div class="contact__links" id="contact-links"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="mono">© <span id="year"></span> Elie Laval — fait main, hébergé sur GitHub Pages</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/stars.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
